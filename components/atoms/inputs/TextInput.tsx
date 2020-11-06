@@ -19,12 +19,14 @@ const Input = styled.input`
 
 export interface ITextInputProps {
   label?: string;
+  value?: string;
   children?: React.ReactNode
 }
 
 export const TextInput = observer(function TextInput({
   label,
   children,
+  value,
   ...rest
 }: ITextInputProps & React.HTMLAttributes<HTMLInputElement>) {
   const {} = useStores()
@@ -35,6 +37,7 @@ export const TextInput = observer(function TextInput({
       id={rest.id}
     >
       <Input
+        value={value}
         {...rest}
       >
       </Input>

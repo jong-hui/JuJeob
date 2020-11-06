@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from "mobx-react";
+import { observer, useLocalObservable } from "mobx-react";
 import styled from 'styled-components';
 import { useStores } from '@/stores';
 import { TextInput } from 'components/atoms/inputs/TextInput';
@@ -13,6 +13,7 @@ const RootWrapper = styled.form`
 `
 const FormBox = styled.div`
   ${styleMixins(["flexRow"])};
+  justify-content: center;
   align-items: flex-end;
 
   ${mobile`
@@ -32,22 +33,42 @@ const Divider = styled.div`
 `
 
 export interface IJujeobFormProps {
-  children?: React.ReactNode
+  onSubmit: (data: { name: string; callName: string }) => void
+  children?: React.ReactNode;
 }
 
 export const JujeobForm = observer(function JujeobForm({
   children,
+  onSubmit,
   ...rest
 }: IJujeobFormProps & React.HTMLAttributes<HTMLFormElement>) {
+  const localStore = useLocalObservable(() => ({
+    name: '',
+    callName: ''
+  }))
   const {} = useStores()
 
   return (
-    <RootWrapper {...rest}>
+    <RootWrapper
+      onSubmit={(e) => {
+        e.preventDefault()
+
+        onSubmit({
+          name: localStore.name,
+          callName: localStore.callName
+        })
+      }}
+      {...rest}
+    >
       <FormBox>
         <TextInput 
           id="jujeob-name"
           label="이름이애오"
           placeholder="이름 입력해 진짜 어떡해"
+          value={localStore.name}
+          onChange={(e) => {
+            localStore.name = e.currentTarget.value
+          }}
         >
         </TextInput>
         <Divider/>
@@ -62,6 +83,10 @@ export const JujeobForm = observer(function JujeobForm({
             { value: '오빠', label: '오빠' },
           ]}
           placeholder="오빠라고 불러"
+          value={localStore.callName}
+          onChange={(e) => {
+            localStore.callName = e.currentTarget.value
+          }}
         ></SelectInput>
         <Divider />
         <Button>

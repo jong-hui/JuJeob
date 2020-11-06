@@ -65,7 +65,11 @@ export default function Home() {
           }
         >
         </Introduce>
-        <HomeJuJeobForm />
+        <HomeJuJeobForm
+          onSubmit={(data) => {
+            console.log(data)
+          }}
+        />
       </div>
     </Wrapper>
   )

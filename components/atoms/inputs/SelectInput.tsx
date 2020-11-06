@@ -22,6 +22,7 @@ const Select = styled.select`
 export interface ISelectInputProps {
   label?: string;
   list: LabelValue[]
+  value?: string;
   children?: React.ReactNode
 }
 
@@ -29,6 +30,7 @@ export const SelectInput = observer(function SelectInput({
   label,
   children,
   list,
+  value,
   ...rest
 }: ISelectInputProps & React.HTMLAttributes<HTMLSelectElement>) {
   const { } = useStores()
@@ -39,6 +41,7 @@ export const SelectInput = observer(function SelectInput({
       id={rest.id}
     >
       <Select
+        value={value}
         {...rest}
       >
         {list.map((x) => (
