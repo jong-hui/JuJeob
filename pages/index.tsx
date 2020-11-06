@@ -1,5 +1,6 @@
 import { styleMixins } from '@/styles/mixins/styleMixins'
 import { mobile } from '@/styles/utils'
+import { Introduce } from 'components/organisms/Introduce/Introduce'
 import styled from 'styled-components'
 
 const Title = styled.h1`
@@ -23,22 +24,34 @@ const Wrapper = styled.div`
       background-position: 200% -200%;
     }
   }
+  
+  padding-top: 100px;
 
   ${mobile`
     background-size: 100vw auto;
+    padding-top: 40px;
   `}
 
-  &:after {
+  &:before {
     content: "";
     background-color: rgba(0,0,0,0.6);
-    ${styleMixins(["fulfilledAbsolute", "absolute"])}
+    ${styleMixins(["fulfilledAbsolute", "absolute"])};
+    z-index: 1;
   }
 `
 
 export default function Home() {
   return (
     <Wrapper>
-
+      <div style={{ position: 'relative', zIndex: 2 }}>
+        <Introduce
+          title="주접 생성기"
+          subTitle={
+            `예지 그거 기억나요? 사람들 한테 예지 좋아하는 사람 손 접어 했더니 지구가 반으로 접힌거\n그거 겨우겨우 되돌렸잖아요 나 그 때 내 눈 앞에 브라질 있어서 깜짝 놀랐잖아`
+          }
+        >
+        </Introduce>
+      </div>
     </Wrapper>
   )
 }
