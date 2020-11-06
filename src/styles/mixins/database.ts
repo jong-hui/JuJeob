@@ -6,6 +6,17 @@ export default {
     justify-content: center;
     align-items: center;
   `,
+  flex: css`
+    display: flex;
+  `,
+  flexRow: css`
+    display: flex;
+    flex-direction: row;
+  `,
+  flexColumn: css`
+    display: flex;
+    flex-direction: column;
+  `,
   fixed: css`
     position: fixed;
   `,

@@ -1,5 +1,6 @@
 import { styleMixins } from '@/styles/mixins/styleMixins'
 import { mobile } from '@/styles/utils'
+import { JujeobForm } from 'components/organisms/forms/JujeobForm/JujeobForm'
 import { Introduce } from 'components/organisms/Introduce/Introduce'
 import styled from 'styled-components'
 
@@ -40,6 +41,19 @@ const Wrapper = styled.div`
   }
 `
 
+const HomeJuJeobForm = styled(JujeobForm)`
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 40px;
+
+  ${mobile`
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  `}
+`
+
 export default function Home() {
   return (
     <Wrapper>
@@ -51,6 +65,7 @@ export default function Home() {
           }
         >
         </Introduce>
+        <HomeJuJeobForm />
       </div>
     </Wrapper>
   )
