@@ -9,6 +9,7 @@ const RootWrapper = styled.button`
   padding-right: 12px;
   border-radius: 7px;
   background-color: white;
+  cursor: pointer;
 `
 
 export interface IButtonProps {

@@ -7,10 +7,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/react-copy-to-clipboard": "^4.3.0",
+    "josa-js": "0.0.2",
     "mobx": "^6.0.3",
     "mobx-react": "^7.0.2",
     "next": "latest",
     "react": "^16.13.0",
+    "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.13.0",
     "styled-components": "^5.0.0"
   },

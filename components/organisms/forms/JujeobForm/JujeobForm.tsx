@@ -41,7 +41,7 @@ export const JujeobForm = observer(function JujeobForm({
   children,
   onSubmit,
   ...rest
-}: IJujeobFormProps & React.HTMLAttributes<HTMLFormElement>) {
+}: IJujeobFormProps & Omit<React.HTMLAttributes<HTMLFormElement>, "onSubmit">) {
   const localStore = useLocalObservable(() => ({
     name: '',
     callName: ''
@@ -64,14 +64,14 @@ export const JujeobForm = observer(function JujeobForm({
         <TextInput 
           id="jujeob-name"
           label="이름이애오"
-          placeholder="이름 입력해 진짜 어떡해"
+          placeholder="이름 입력해 진짜 어떡해 내가 미쳐"
           value={localStore.name}
           onChange={(e) => {
             localStore.name = e.currentTarget.value
           }}
         >
         </TextInput>
-        <Divider/>
+        {/* <Divider/>
         <SelectInput
           id="jujeob-callName"
           label="호칭이애오"
@@ -87,7 +87,7 @@ export const JujeobForm = observer(function JujeobForm({
           onChange={(e) => {
             localStore.callName = e.currentTarget.value
           }}
-        ></SelectInput>
+        ></SelectInput> */}
         <Divider />
         <Button>
           주접 떨기

@@ -2,7 +2,9 @@ import { styleMixins } from '@/styles/mixins/styleMixins'
 import { mobile } from '@/styles/utils'
 import { JujeobForm } from 'components/organisms/forms/JujeobForm/JujeobForm'
 import { Introduce } from 'components/organisms/Introduce/Introduce'
+import React from 'react'
 import styled from 'styled-components'
+import { HomeMain } from './Home/HomeMain'
 
 const Title = styled.h1`
   color: red;
@@ -27,10 +29,12 @@ const Wrapper = styled.div`
   }
   
   padding-top: 100px;
+  padding-bottom: 100px;
 
   ${mobile`
     background-size: 100vw auto;
     padding-top: 40px;
+    padding-bottom: 40px;
   `}
 
   &:before {
@@ -41,36 +45,10 @@ const Wrapper = styled.div`
   }
 `
 
-const HomeJuJeobForm = styled(JujeobForm)`
-  margin: 0 auto;
-  width: 50%;
-  padding-top: 40px;
-
-  ${mobile`
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-  `}
-`
-
 export default function Home() {
   return (
     <Wrapper>
-      <div style={{ position: 'relative', zIndex: 2 }}>
-        <Introduce
-          title="주접 생성기"
-          subTitle={
-            `예지 그거 기억나요? 사람들 한테 예지 좋아하는 사람 손 접어 했더니 지구가 반으로 접힌거\n그거 겨우겨우 되돌렸잖아요 나 그 때 내 눈 앞에 브라질 있어서 깜짝 놀랐잖아`
-          }
-        >
-        </Introduce>
-        <HomeJuJeobForm
-          onSubmit={(data) => {
-            console.log(data)
-          }}
-        />
-      </div>
+      <HomeMain />
     </Wrapper>
   )
 }
