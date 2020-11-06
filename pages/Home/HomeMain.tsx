@@ -6,6 +6,7 @@ import { Introduce } from 'components/organisms/Introduce/Introduce';
 import { mobile } from '@/styles/utils';
 import { JujeobForm } from 'components/organisms/forms/JujeobForm/JujeobForm';
 import { JuJeobResult } from 'components/organisms/JuJeobResult/JuJeobResult';
+import { DeveloperInfo } from 'components/molecules/DeveloperInfo/DeveloperInfo';
 
 const HomeJuJeobForm = styled(JujeobForm)`
   margin: 0 auto;
@@ -66,6 +67,7 @@ export const HomeMain = observer(function HomeMain({
       <HomeJuJeobResultWrapper>
         <JuJeobResult />
       </HomeJuJeobResultWrapper>
+      <DeveloperInfo />
     </RootWrapper>
   )
 })

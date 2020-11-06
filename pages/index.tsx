@@ -29,7 +29,7 @@ const Wrapper = styled.div`
   }
   
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 0px;
 
   ${mobile`
     background-size: 100vw auto;

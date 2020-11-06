@@ -26,7 +26,7 @@ export class AppStore {
   setNewMainText() {
     clearTimeout(this.mainTextTimouetScheduler)
 
-    this.mainText = jujeobService.getJujeobText(randInArray(nameDatabase)) + jujeobService.getJujeobText(randInArray(nameDatabase)) + jujeobService.getJujeobText(randInArray(nameDatabase)) + jujeobService.getJujeobText(randInArray(nameDatabase)) + jujeobService.getJujeobText(randInArray(nameDatabase)) + jujeobService.getJujeobText(randInArray(nameDatabase)) + jujeobService.getJujeobText(randInArray(nameDatabase)) + jujeobService.getJujeobText(randInArray(nameDatabase))
+    this.mainText = jujeobService.getJujeobText(randInArray(nameDatabase))
     this.mainTextSchedulerRegister()
   }
 
