@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { styleMixins } from '@/styles/mixins/styleMixins'
 import { mobile } from '@/styles/utils'
 import { JujeobForm } from 'components/organisms/forms/JujeobForm/JujeobForm'
@@ -48,6 +49,9 @@ const Wrapper = styled.div`
 export default function Home() {
   return (
     <Wrapper>
+      <Head>
+        <title>주접 생성기</title>
+      </Head>
       <HomeMain />
     </Wrapper>
   )
