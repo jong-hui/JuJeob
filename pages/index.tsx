@@ -5,7 +5,7 @@ import { JujeobForm } from 'components/organisms/forms/JujeobForm/JujeobForm'
 import { Introduce } from 'components/organisms/Introduce/Introduce'
 import React from 'react'
 import styled from 'styled-components'
-import { HomeMain } from './Home/HomeMain'
+import { HomeMain } from '../components/pages/Home/HomeMain'
 
 const Title = styled.h1`
   color: red;
