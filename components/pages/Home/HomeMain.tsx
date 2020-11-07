@@ -57,7 +57,7 @@ export const HomeMain = observer(function HomeMain({
   return (
     <RootWrapper>
       <Introduce
-        title="주접 생성ㄸ기"
+        title="주접 생성기"
         subTitle={appStore.mainText}
       >
       </Introduce>
