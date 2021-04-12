@@ -9,7 +9,7 @@ const RootWrapper = styled.div`
 `
 
 const FormLabel = styled.label`
-  font-size: 1em;
+  font-size: 1rem;
   color: #fff;
   margin-bottom: 8px;
 `

@@ -9,6 +9,7 @@ const RootWrapper = styled.div`
   border-radius: 7px;
   padding: 20px;
   color: #333;
+  font-size: 1rem;
 `
 
 export interface IJuJeobResultProps {
