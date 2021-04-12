@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@types/react-copy-to-clipboard": "^4.3.0",
-    "josa-js": "0.0.2",
+    "josa-js": "git://github.com/jong-hui/Josa.js",
     "mobx": "^6.0.3",
     "mobx-react": "^7.0.2",
     "next": "latest",
