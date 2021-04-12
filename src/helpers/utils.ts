@@ -13,6 +13,7 @@ export const convertJuJeobParams = function convertJuJeobParams(name: string) {
     dl: hasJong ? '이' : '',
     dlrk: hasJong ? '이가' : '가',
     dmssms: hasJong ? '은' : '는',
+    dmffmf: hasJong ? '을' : '를',
     dkdi: hasJong ? '아' : '야',
   }
 }
