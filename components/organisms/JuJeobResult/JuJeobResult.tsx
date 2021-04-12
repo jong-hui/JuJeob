@@ -30,10 +30,13 @@ export const JuJeobResult = observer(function JuJeobResult({
     >
       <RootWrapper>
         {appStore.resultText.split("\n").map((x) => (
-          <React.Fragment key={x}>
-            {x}
-            <br/>
-          </React.Fragment>
+          <div
+            key={x}
+            dangerouslySetInnerHTML={{
+              __html: x
+            }}
+          >
+          </div>
         ))}
       </RootWrapper>
     </CopyToClipboard>
