@@ -9,6 +9,7 @@ const RootWrapper = styled.div`
   border-radius: 7px;
   padding: 20px;
   color: #333;
+  font-size: 1rem;
 `
 
 export interface IJuJeobResultProps {
@@ -29,10 +30,13 @@ export const JuJeobResult = observer(function JuJeobResult({
     >
       <RootWrapper>
         {appStore.resultText.split("\n").map((x) => (
-          <React.Fragment key={x}>
-            {x}
-            <br/>
-          </React.Fragment>
+          <div
+            key={x}
+            dangerouslySetInnerHTML={{
+              __html: x
+            }}
+          >
+          </div>
         ))}
       </RootWrapper>
     </CopyToClipboard>
