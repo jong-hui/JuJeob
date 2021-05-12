@@ -4,8 +4,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "export": "next export",
     "start": "next start -p $PORT",
-    "deploy": "npm install && npm run build && eb deploy ju-jeob-production"
+    "deploy": "npm run export && aws s3 sync ./out s3://ju-jeob-site"
   },
   "dependencies": {
     "@types/react-copy-to-clipboard": "^4.3.0",
