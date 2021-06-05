@@ -11,8 +11,8 @@
 <https://jong-hui.github.io/devlog/review/2020/11/10/주접생성기-사이트-개발후기/>
 
 - aws
-  - elasticbeanstalk
   - s3
+  - cloudfront
 - nextJS
 - typescript
 - styled-components
